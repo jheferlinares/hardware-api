@@ -6,11 +6,11 @@ provider:
   region: us-east-1
   stage: prod
   
-  # Variables de entorno
+  # Environment variables
   environment:
     TABLE_NAME: HardwareInventory
   
-  # Permisos para acceder a DynamoDB
+  # Permissions to access DynamoDB
   iam:
     role:
       statements:
@@ -37,7 +37,7 @@ functions:
           method: ANY
           cors: true
 
-# Excluir archivos innecesarios del deploy
+# Exclude unnecessary files from deployment
 package:
   exclude:
     - .git/**

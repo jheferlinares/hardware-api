@@ -6,7 +6,7 @@ const { DynamoDBDocumentClient, PutCommand, GetCommand, UpdateCommand, DeleteCom
 const app = express();
 app.use(express.json());
 
-// Lambda ya tiene AWS_REGION automáticamente
+// Lambda already has AWS_REGION automatically
 const client = new DynamoDBClient({ 
   region: process.env.AWS_REGION || 'us-east-1' 
 });
@@ -93,11 +93,11 @@ app.delete('/hardware/:id', async (req, res) => {
   }
 });
 
-// Para desarrollo local
+// For local development
 if (require.main === module) {
   const PORT = 3000;
   app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));
 }
 
-// Para Lambda
+// For Lambda
 module.exports = app;

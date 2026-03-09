@@ -2,10 +2,10 @@
 # Local development
 @baseUrl = http://localhost:3000
 # Production (AWS Lambda)
-# @baseUrl = https://vk6496iyqd.execute-api.us-east-1.amazonaws.com/prod
+# @baseUrl = https://vk6496iyqd.execute-api.us-east-1.amazonaws.com/prod/hardware
 @itemId = 001
 
-### CREATE - Crear nuevo item
+### CREATE - Create new item
 POST {{baseUrl}}/hardware
 Content-Type: application/json
 
@@ -16,13 +16,13 @@ Content-Type: application/json
   "location": "Office A"
 }
 
-### READ ALL - Obtener todos los items
+### READ ALL - Get all items
 GET {{baseUrl}}/hardware
 
-### READ ONE - Obtener un item específico
+### READ ONE - Get specific item
 GET {{baseUrl}}/hardware/{{itemId}}
 
-### UPDATE - Actualizar item
+### UPDATE - Update item
 PUT {{baseUrl}}/hardware/{{itemId}}
 Content-Type: application/json
 
@@ -31,10 +31,10 @@ Content-Type: application/json
   "location": "Office B"
 }
 
-### DELETE - Eliminar item
+### DELETE - Delete item
 DELETE {{baseUrl}}/hardware/{{itemId}}
 
-### CREATE - Otro ejemplo
+### CREATE - Another example
 POST {{baseUrl}}/hardware
 Content-Type: application/json
 
@@ -45,12 +45,10 @@ Content-Type: application/json
   "location": "Warehouse"
 }
 
-### Error Test - Sin campos requeridos
+### Error Test - Missing required fields
 POST {{baseUrl}}/hardware
 Content-Type: application/json
 
 {
   "quantity": 5
 }
-
-### Test Production Endpoint
