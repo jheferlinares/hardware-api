@@ -63,7 +63,7 @@ app.put('/hardware/:id', async (req, res) => {
     
     if (name) { updates.push('#n = :name'); values[':name'] = name; names['#n'] = 'name'; }
     if (quantity !== undefined) { updates.push('quantity = :qty'); values[':qty'] = quantity; }
-    if (location) { updates.push('location = :loc'); values[':loc'] = location; }
+    if (location) { updates.push('#loc = :loc'); values[':loc'] = location; names['#loc'] = 'location'; }
     
     if (updates.length === 0) return res.status(400).json({ error: 'No fields to update' });
     
@@ -72,7 +72,7 @@ app.put('/hardware/:id', async (req, res) => {
       Key: { id: req.params.id },
       UpdateExpression: `SET ${updates.join(', ')}`,
       ExpressionAttributeValues: values,
-      ...(Object.keys(names).length > 0 && { ExpressionAttributeNames: names })
+      ExpressionAttributeNames: names
     }));
     res.json({ message: 'Item updated' });
   } catch (error) {
