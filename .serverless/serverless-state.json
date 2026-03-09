@@ -127,7 +127,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-2855cd89-b8b1",
-                "S3Key": "serverless/hardware-inventory-api/prod/1773090248492-2026-03-09T21:04:08.492Z/hardware-inventory-api.zip"
+                "S3Key": "serverless/hardware-inventory-api/prod/1773096666547-2026-03-09T22:51:06.547Z/hardware-inventory-api.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs18.x",
@@ -150,14 +150,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionzoah50b8BViWwhobpHLqafPEkPJ7Wr2l54dQhmHFU": {
+          "ApiLambdaVersionH4GEvCCD8Xk2nqAXiCG70FZNbDMN3KwnhrrS6uldWE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "eUSg9vgkGZiXMZ4Fece8NYl4pKwIBSlY/u4OafNWppA="
+              "CodeSha256": "sGsh353mlwrOAVzyVxbuRGdeqiLwJi1ieFkQas+HSx4="
             }
           },
           "ApiGatewayRestApi": {
@@ -375,7 +375,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1773090222872": {
+          "ApiGatewayDeployment1773096653297": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -438,7 +438,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionzoah50b8BViWwhobpHLqafPEkPJ7Wr2l54dQhmHFU"
+              "Ref": "ApiLambdaVersionH4GEvCCD8Xk2nqAXiCG70FZNbDMN3KwnhrrS6uldWE"
             },
             "Export": {
               "Name": "sls-hardware-inventory-api-prod-ApiLambdaFunctionQualifiedArn"
@@ -534,7 +534,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionzoah50b8BViWwhobpHLqafPEkPJ7Wr2l54dQhmHFU"
+        "versionLogicalId": "ApiLambdaVersionH4GEvCCD8Xk2nqAXiCG70FZNbDMN3KwnhrrS6uldWE"
       }
     },
     "configValidationMode": "warn",
@@ -563,7 +563,7 @@
         "artifactsS3KeyDirname": "serverless/hardware-inventory-api/prod/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-2855cd89-b8b1",
         "artifact": "C:\\Users\\pc\\hardware-api\\.serverless\\hardware-inventory-api.zip",
-        "artifactDirectoryName": "serverless/hardware-inventory-api/prod/1773090248492-2026-03-09T21:04:08.492Z"
+        "artifactDirectoryName": "serverless/hardware-inventory-api/prod/1773096666547-2026-03-09T22:51:06.547Z"
       }
     },
     "appId": null,
@@ -572,7 +572,7 @@
     "artifact": "C:\\Users\\pc\\hardware-api\\.serverless\\hardware-inventory-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/hardware-inventory-api/prod/1773090248492-2026-03-09T21:04:08.492Z",
+    "artifactDirectoryName": "serverless/hardware-inventory-api/prod/1773096666547-2026-03-09T22:51:06.547Z",
     "artifact": "hardware-inventory-api.zip"
   }
 }

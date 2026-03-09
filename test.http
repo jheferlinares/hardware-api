@@ -1,5 +1,8 @@
 ### Variables
+# Local development
 @baseUrl = http://localhost:3000
+# Production (AWS Lambda)
+# @baseUrl = https://vk6496iyqd.execute-api.us-east-1.amazonaws.com/prod
 @itemId = 001
 
 ### CREATE - Crear nuevo item
@@ -50,4 +53,4 @@ Content-Type: application/json
   "quantity": 5
 }
 
-GET https://vk6496iyqd.execute-api.us-east-1.amazonaws.com/prod/hardware
+### Test Production Endpoint
