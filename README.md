@@ -288,7 +288,7 @@ This project is for educational purposes as part of university coursework.
 
 ## Contact
 
-**Your Name**  
+**Jhefer Linares**  
 Email: linaresjhefer@gmail.com
 GitHub: [jheferlinares](https://github.com/jheferlinares)
 
