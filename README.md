@@ -67,8 +67,8 @@ DynamoDB (NoSQL Database)
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/hardware-inventory-api.git
-   cd hardware-inventory-api
+   git clone https://github.com/jheferlinares/hardware-api
+   cd hardware-api
    ```
 
 2. **Install dependencies**
@@ -289,8 +289,8 @@ This project is for educational purposes as part of university coursework.
 ## Contact
 
 **Your Name**  
-Email: your.email@university.edu  
-GitHub: [@your-username](https://github.com/your-username)
+Email: linaresjhefer@gmail.com
+GitHub: [jheferlinares](https://github.com/jheferlinares)
 
 ## Acknowledgments
 
@@ -300,5 +300,5 @@ GitHub: [@your-username](https://github.com/your-username)
 
 ---
 
-**Project completed as part of [Course Name] - [University Name]**  
+**Project completed as part of [Applied Programming] - [BYU - Idaho]**  
 **Date:** March 2026
