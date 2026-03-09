@@ -1,0 +1,53 @@
+### Variables
+@baseUrl = http://localhost:3000
+@itemId = 001
+
+### CREATE - Crear nuevo item
+POST {{baseUrl}}/hardware
+Content-Type: application/json
+
+{
+  "id": "{{itemId}}",
+  "name": "Laptop Dell",
+  "quantity": 5,
+  "location": "Office A"
+}
+
+### READ ALL - Obtener todos los items
+GET {{baseUrl}}/hardware
+
+### READ ONE - Obtener un item específico
+GET {{baseUrl}}/hardware/{{itemId}}
+
+### UPDATE - Actualizar item
+PUT {{baseUrl}}/hardware/{{itemId}}
+Content-Type: application/json
+
+{
+  "quantity": 3,
+  "location": "Office B"
+}
+
+### DELETE - Eliminar item
+DELETE {{baseUrl}}/hardware/{{itemId}}
+
+### CREATE - Otro ejemplo
+POST {{baseUrl}}/hardware
+Content-Type: application/json
+
+{
+  "id": "002",
+  "name": "Monitor Samsung",
+  "quantity": 10,
+  "location": "Warehouse"
+}
+
+### Error Test - Sin campos requeridos
+POST {{baseUrl}}/hardware
+Content-Type: application/json
+
+{
+  "quantity": 5
+}
+
+GET https://vk6496iyqd.execute-api.us-east-1.amazonaws.com/prod/hardware

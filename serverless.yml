@@ -1,0 +1,52 @@
+service: hardware-inventory-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: prod
+  
+  # Variables de entorno
+  environment:
+    TABLE_NAME: HardwareInventory
+  
+  # Permisos para acceder a DynamoDB
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:PutItem
+            - dynamodb:GetItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:Scan
+            - dynamodb:Query
+          Resource: "arn:aws:dynamodb:us-east-1:*:table/HardwareInventory"
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+      - http:
+          path: /
+          method: ANY
+          cors: true
+
+# Excluir archivos innecesarios del deploy
+package:
+  exclude:
+    - .git/**
+    - .env
+    - test.http
+    - setup-dynamodb.js
+    - check-tables.js
+    - test-dynamodb.js
+    - DOCUMENTACION_COMPLETA.md
+    - GUIA_POSTMAN.md
+    - swagger.js
+    - server-with-swagger.js
