@@ -22,7 +22,9 @@ provider:
             - dynamodb:DeleteItem
             - dynamodb:Scan
             - dynamodb:Query
-          Resource: "arn:aws:dynamodb:us-east-1:*:table/HardwareInventory"
+          Resource: 
+            - "arn:aws:dynamodb:us-east-1:*:table/HardwareInventory"
+            - "arn:aws:dynamodb:us-east-1:*:table/Locations"
 
 functions:
   api:

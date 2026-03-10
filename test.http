@@ -52,3 +52,48 @@ Content-Type: application/json
 {
   "quantity": 5
 }
+
+### ========== LOCATIONS ENDPOINTS ==========
+
+### CREATE Location
+POST {{baseUrl}}/locations
+Content-Type: application/json
+
+{
+  "id": "LOC001",
+  "name": "Office A",
+  "capacity": 50,
+  "manager": "John Smith"
+}
+
+### CREATE Another Location
+POST {{baseUrl}}/locations
+Content-Type: application/json
+
+{
+  "id": "LOC002",
+  "name": "Warehouse",
+  "capacity": 200,
+  "manager": "Maria Garcia"
+}
+
+### READ ALL Locations
+GET {{baseUrl}}/locations
+
+### READ ONE Location
+GET {{baseUrl}}/locations/LOC001
+
+### UPDATE Location
+PUT {{baseUrl}}/locations/LOC001
+Content-Type: application/json
+
+{
+  "capacity": 75,
+  "manager": "Jane Doe"
+}
+
+### DELETE Location
+DELETE {{baseUrl}}/locations/LOC002
+
+### GET Hardware by Location (Relationship)
+GET {{baseUrl}}/locations/Office A/hardware
